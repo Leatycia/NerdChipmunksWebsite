@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pong</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+     <style>
+     @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Dancing+Script:wght@500&display=swap");
+body {
+  font-family: "Advent pro", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 2.3em;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+}
+/* *********navbar********* */
+nav {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  height: 1.7cm;
+}
+header li {
+  float: right;
+  font-size: 1.2em;
+}
+header li a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 18px 16px;
+}
+#logo {
+  float: left;
+  position: relative;
+  bottom: 0.4cm;
+}
+#logo h5{
+  color: #ffffff;
+  font-family:'Courier', Courier, monospace;
+}
+
+/* **************image principale********** */
+#imagePrincipale {
+  padding-top: 60px;
+  background: url(photos/Couv.jpg) no-repeat fixed 50% 50%;
+  background-size: cover;
+  height: 799px;
+}
+h1 {
+  font-family:'Courier New', Courier, monospace;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 5em;
+  margin-top: 100px;
+  text-shadow: 1px 3px 2px rgb(0, 0, 0);
+}
+
+/* *******presentation****** */
+#presentation {
+  background-color: #dad7cd;
+  padding: 10px 0px 100px 0px;
+}
+#textIntro {
+  padding: 0px 20%;
+}
+#prestation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 10%;
+}
+.imagesPresentation h4 {
+  text-align: center;
+  font-family: "Advent pro", cursive;
+  font-size: 1.8 em;
+  margin: 15px;
+  font-weight: 300;
+}
+.imagesPresentation img {
+  box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.6);
+}
+.imagesPresentation img:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+#commentaire {
+  background-color: #e6e4db;
+  padding: 3px;
+}
+#commentaire h2 {
+  text-align: center;
+}
+#commentaires {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 3%;
+}
+
+.images img:hover {
+  transform: scale(1.05);
+}
+/* ********footer***** */
+footer {
+  background-color: #eeece2;
+  padding: 20px 0px 10px 0px;
+  text-align: center;
+}
+form {
+  margin: 0 auto;
+  max-width: 900;
+}
+input,
+textarea,
+button {
+  border: none;
+  width: 55%;
+  padding: 15px 10px;
+  margin: 1px 0;
+  font-size: 1.2em;
+}
+textarea {
+  height: 120px;
+}
+button {
+  font-size: 1em;
+  background-color: rgb(194, 194, 189);
+  border: none;
+  width: 55%;
+  padding: 15px 10px;
+  margin: 1px 0;
+  font-size: 1.2em;
+}
+button:hover {
+  background-color: rgb(100, 100, 98);
+  cursor: pointer;
+}
+#CopyrightAndIcons {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 0px 10%;
+}
+#copyright {
+  width: 50%;
+  text-align: left;
+  color: black;
+}
+#icons {
+  width: 50%;
+  text-align: right;
+}
+#icons a {
+  display: inline-block;
+  padding: 0px 15px;
+  font-size: 1.3em;
+  color: black;
+}
+
+     </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="logo">
+                    <a href="#"><h5>P O N G</h5></a>
+                </li>
+                <li>
+                    <a href="pong.html">Online version</a>
+                </li>
+                <li>
+                    <a href="Man.html">Manual</a>
+                </li>
+                <li>
+                    <a href="#accessFrom">Leave a comment</a> 
+                </li>
+                
+            </ul>
+        </nav>
+        <div id="imagePrincipale">
+            
+        </div>
+    </header>
+    <section id="commentaire">
+        <h2>Your comments...</h2>
+        <div id="commentaires">
+        <div class="images">
+            <a href="#"><img src="photos/1.png" alt="com1"></a>
+        </div>
+        <div class="images">
+            <a href="#"><img src="photos/2.png" alt="com2"></a>
+        </div>
+        <div class="images">
+            <a href="#"><img src="photos/3.png" alt="com3"></a>
+        </div>
+        <div class="images">
+            <a href="#"><img src="photos/4.png" alt="com4"></a>
+        </div>
+        </div>
+       
+
+    </section>
+    <footer id="accessFrom">
+        <h2>
+            Contact us!
+        </h2>
+        <form action="send2.php" method="post">
+            <input placeholder="NAME" name="nomComplet">
+            <input placeholder="EMAIL" name="email">
+            <textarea placeholder="YOUR COMMENT" name="message"></textarea>
+            <button>SEND</button>
+        </form>
+        <div id="CopyrightAndIcons">
+            <div id="copyright">
+                <span>© PONG: 2022</span>
+            </div>
+            <div id="icons">
+                <a href="http://www.twitter.fr"><i class="fa fa-twitter"></i></a>
+                <a href="http://www.facebook.fr"><i class="fa fa-facebook"></i></a>
+                <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+
+
+            </div>
+            
+        </div>
+
+    </footer>
+</body>
+</html>
